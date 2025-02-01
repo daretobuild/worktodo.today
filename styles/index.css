@@ -1,8 +1,5 @@
-.h1{
-    
-    font-family: 'Instrument Sans';
-    
-
+*{
+    font-family:  'Instrument Sans';
 }
 .rg{
     color: rgb(74,162,174);
