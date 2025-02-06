@@ -17,6 +17,9 @@ body {
     
 }
 .warn{
- font-family: 'inter'
- ;   
+ font-family: 'inter';   
+}
+.side-image{
+    width: 537px;
+    height: auto;
 }
