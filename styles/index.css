@@ -1,0 +1,25 @@
+body {
+    font-family:  'Instrument Sans';
+}
+.rg{
+    color: rgb(74,162,174);
+    border-color: rgb(74,162,174);
+    font-family: 'Instrument Sans';
+    
+}
+.h1.heading{
+    font-size: 60px;
+    font-weight: 600;
+   
+}
+.feature{
+    font-family: 'Instrument Sans';
+    
+}
+.warn{
+ font-family: 'inter';   
+}
+.side-image{
+    width: 537px;
+    height: auto;
+}
