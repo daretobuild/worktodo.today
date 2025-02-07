@@ -23,6 +23,6 @@ body {
     width: 537px;
     height: 'auto';
 }
-.list{
+li.list{
     margin-top: 14px;
 }
