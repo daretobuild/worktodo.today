@@ -28,15 +28,13 @@ body {
  font-family: 'inter';   
 }
 .side-image{
-    width: 537px;
+    width: 767px;
     height: 'auto';
 }
 li.list{
     margin-top: 14px;
 }
-.nav-1{
-    padding: 20px 52px;
-}
+
 .fnt{
     font-family: "instrument sans";
 }
