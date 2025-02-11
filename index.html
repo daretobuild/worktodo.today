@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <script>
+      function toggleMenu() {
+          const menuIcon = document.getElementById('menu-icon');
+          const menu = document.getElementById('menu');
+          if (menuIcon.classList.contains('fa-times')) {
+              menuIcon.classList.remove('fa-times');
+              menuIcon.classList.add('fa-bars');
+              menu.classList.add('hidden');
+          } else {
+              menuIcon.classList.remove('fa-bars');
+              menuIcon.classList.add('fa-times');
+              menu.classList.remove('hidden');
+          }
+      }
+  </script>
+
     <script src="https://cdn.tailwindcss.com">
       
     </script>
@@ -34,17 +52,20 @@
     <link href='https://fonts.googleapis.com/css?family=Instrument Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
     <title>WorkToDo</title>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white  " Style="font-family:instrument sans">
   <div class="nav bg-white border-b border-gray-100">
-    <div class="container mx-auto flex justify-between items-center py-4">
-     <div class="flex items-center">
-      <img alt="Logo with WTD text" class="h-8px w-[120px]" src="assets/images/WTD.png"/>
+    <div class="md:container mx-auto max-sm:mx-[24px] flex justify-between items-center py-4">
+     <div class="flex items-center w-full md:w-[auto] px-2 ">
+      <div class="grow md:grow-0">
+        <img alt="Logo with WTD text" class="h-8px w-[120px]" src="assets/images/WTD.png"/>
+      </div>
+      
       <nav class=" hidden md:flex space-x-4">
       <div class="flex space-x-4 ml-6">
-       <a class="text-gray-500 hover:text-gray-800 font-semibold" href="index.html">
+       <a class="text-[#4AA2AE] hover:text-gray-800 font-semibold" href="index.html">
         Home
        </a>
        <a class="text-gray-500 hover:text-gray-800 font-semibold" href="about.html">
@@ -53,26 +74,37 @@
       </div>
     </nav>
     
-    <div class="md:hidden relative">
-      <button class="text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-button">
-       <i class="fas fa-bars text-2xl">
+   
+    <div class="md:hidden main-wrapper">
+      <button class="text-gray-600 hover:text-gray-800"   >
+       <i id="menu-icon" class="fas fa-bars text-2xl cursor-pointer"  onclick="toggleMenu()">
        </i>
       </button>
-      <div class="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg md:hidden" id="menu">
-       <a class="block px-4 py-2 text-gray-600 hover:bg-gray-100" href="#">
+      <div class="flex flex-row-1">
+      <div  id="menu" class=" absolute right-0 w-1/4 justify-center mt-2 w-full bg-white border rounded-lg shadow-lg hidden md:hidden" >
+          <div class="pb-[23px] px-[23px]">
+        <div class="">
+       <a class="block px-4 py-2 text-gray-600 hover:bg-gray-100" href="index.html">
         Home
        </a>
+      </div>
+      <div class="">
        <a class="block px-4 py-2 text-gray-600 hover:bg-gray-100" href="about.html">
         About
        </a>
-       <a class="block px-4 py-2 text-gray-600 hover:bg-gray-100" href="https://tally.so/r/m6QNbk">
+      </div>
+       <div class="text-center   w-full">
+       <a class="block px-[63px] bg-[#4AA2AE] py-2 text-[#ffffff] text-[16px] font-[600]  rounded-[8px] hover:bg-gray-100" href="https://tally.so/r/m6QNbk">
         Try Now
        </a>
       </div>
+  </div>
+      </div>
+    </div>
      </div>
      </div>
-     <div class="flex ">
-      <button class="bg-[#4AA2AE] text-white px-4 py-2 rounded-[8px] ">
+     <div class="flex  hidden md:block ">
+      <button class="bg-[#4AA2AE]  text-white px-4 py-2 rounded-[8px]  ">
         <a class="" href="https://tally.so/r/m6QNbk">
        Try Now
        </a>
@@ -84,25 +116,25 @@
    </div>
     <div class="container mx-auto mt-10 px-4">
      <div class="flex flex-col items-center">
-        <div class="flex space-x-2 mb-4  rounded-full pr-[16px] pl-[0px] py-1 w-360 h-32px bg-cyan-50">
-          <button class="rg border-2   bg-white rounded-full font-[14] leading-(20) px-[10px] ml-[3px] text-base">
+        <div class="flex space-x-2 mb-4 text-[12px] rounded-full pr-[16px] pl-[0px]  py-1 w-360 h-32px bg-cyan-50">
+          <button class="rg border-2   bg-white rounded-full max-sm:tex-[16px] md:text-[14px] leading-(20) px-[10px] ml-[3px] padding-[1px 8px]">
             Launching Soon
         </button>
-        <a href="https://tally.so/r/m6QNbk" class=" flex items-center  space-x-2">
-            <span class="rg">Click here to get early access</span>
-            <i class=" rg fas fa-arrow-right"></i>
+        <a href="https://tally.so/r/m6QNbk" class=" flex items-center md:text-base space-x-2">
+            <span class="rg max-sm:text-[12px] font-[500] md:text-[14px]">Click here to get early access</span>
+            <i class=" rg fas fa-arrow-right "></i>
         </a>
      </div>
     <div class="flex">
-     <h1 class="heading  font-[600] text-[60px] leading-[72px]  text-center mb-4">
+     <h1 class="heading  font-[600] max-sm:text-[38px]  md:text-[60px]  max-sm:leading-[38px] md:leading-[72px]  text-center mb-4">
      
       Personal CRM for Founders and Professionals
      </h1>
     </div>
-    <div class="flex text-[#535862] mb-12 w-768 leading-[32px]">
-     <h4 class=" warn text-[20px] text-center  font-[400]">
-      Stop letting valuable relationships slip through the cracks. WorkToDo.Today helps </br>&nbsp;&nbsp;&nbsp;you manage your tasks and nurture your network in one seamless platform.
-     </h4>
+    <div class="flex text-[#535862] text-center justify-center mb-12 max-sm:leading-[30px] md:leading-[32px]">
+     <span class=" warn max-sm:text-[18px] md:text-[20px] md:w-[780px]  max-sm:w-[343px] font-[400]">
+      Stop letting valuable relationships slip through the cracks. WorkToDo.Today helps &nbsp;&nbsp;&nbsp;you manage your tasks and nurture your network in one seamless platform.
+     </span>
     </div>
     <div class="flex bg-white shadow-lg   rounded-lg   mx-auto ">
       <img alt="Logo with WTD text" class="h-8px w-8px" src="assets/images/Macbook_Pro_16.png"/>
@@ -114,27 +146,28 @@
     <div class="flex flex-col feature pb-[32px] pt-[96px] items-center">
       <div class=" text-center mb-12">
         <span class="rg inline-block font-[500] text-[14px] border border-[#4AA2AE]   rounded-full px-5 py-2 ">Features</span>
-        <h2 class="heading font-[600] text-[60px] text-center my-6">Your All-in-One Productivity Hub</h2>
+        <h2 class="heading font-[600] max-sm:justify-center max-sm:leading-[44px] md:leading-[72px] max-sm:text-[36px] md:text-[60px] text-center my-6">Your All-in-One Productivity Hub</h2>
         <p class="text-gray-600 text-[20px]">free, open-source to-do list application that helps you manage your tasks and stay productive.</p>
     </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="flex items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 item-start gap-8">
+      <div class="flex items-center sm:order-first lg:order-none">
      
-       <div class="ml-4">
-        <div class="flex">
+       <div class="ml-4 w-full">
+        <div class="flex justify-center md:justify-start mx-[12px] my-[12px]">
           <div class="bg-[#D3FAFF]  rounded-full">
            <img src="assets/images/Featured_icon.png" alt="">
            </i>
           </div>
          </div>
-        <h2 class="text-[30px] font-[600] leading-[38px]">
+         
+        <h3 class="text-[30px] text-[#181D27]  font-[600] text-center md:text-left max-sm:leading-[32px] md:leading-[38px]">
          Write Freely, Let AI Do the Rest
-        </h2>
-        <p class="text-gray-600 mt-2 font-[400] leading-[28px] text-[18px]">
+        </h3>
+        <p class="text-gray-600 mt-2 font-[400] leading-[28px] max-sm:text-[16px] md:text-[18px] text-center md:text-start ">
          Just type like you’re thinking—our GenAI transforms raw notes into actionable tasks, summaries, or follow-ups effortlessly
         </p>
-        <ul class="mt-4 space-y-2">
+        <ul class="list_1 mt-4 space-y-6">
          <li class="list flex items-center ">
           <img class="bg-[#D3FAff] px-1 py-1 rounded-full mr-2"src="assets/images/tick.png" alt="">
           
@@ -159,30 +192,30 @@
         </ul>
        </div>
       </div>
-      <div class="flex justify-center ">
+      <div class="flex justify-center sm:order-last md:order-none lg:order-none ">
        <img alt="Screenshot of My Tasks for the Day with tasks and idle contacts" class=" side-image" src="assets/images/3_2_screen_mockup.png" />
       </div>
      </div>
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-      <div class="flex justify-center ">
+     <div class="grid grid-cols-1 md:grid-cols-2 item-start gap-8 mt-12">
+      <div class="flex justify-center order-2 md:order-none  ">
         <img alt="Screenshot of My Tasks for the Day with tasks and idle contacts" class=" side-image" src="assets/images/2_screen_mockup.png" />
        </div>
-      <div class="flex items-center">
+      <div class="flex items-center sm:order-first md:order-none lg:order-none">
        
-       <div class="ml-4">
-        <div class="flex">
+       <div class="ml-4 order-1 md:order-none w-full">
+        <div class="flex justify-center md:justify-start mx-[12px] my-[12px]">
           <div class=" rounded-full">
            <img src="assets/images/usericon.png" alt="">
            
           </div>
          </div>
-        <h2 class="text-[30px] font-[600] leading-[38px]">
+        <h3 class="text-[30px] font-[600] text-center md:text-left leading-[38px]">
          Link every Task and Note to a Contact
-        </h2>
-        <p class="text-gray-600 mt-2 font-[400] leading-[28px] text-[18px]">
+        </h3>
+        <p class="text-gray-600 mt-2 font-[400] leading-[28px] text-[18px] text-center md:text-start">
          Tasks and Notes connected to Contacts so you always know what’s next and never miss an important follow-up
         </p>
-        <ul class="mt-4 space-y-2">
+        <ul class="list_1 mt-4 space-y-6">
          <li class="list flex items-center ">
           <img class="bg-[#D3FAff] px-1 py-1 rounded-full mr-2"src="assets/images/tick.png" alt="">
           
@@ -209,23 +242,23 @@
       </div>
       
      </div>
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="flex items-center">
+     <div class="grid grid-cols-1 md:grid-cols-2 item-start gap-8">
+      <div class="flex items-center md:order-none sm:order-first">
      
-       <div class="ml-4 ">
-        <div class="flex">
+       <div class="ml-4 w-full">
+        <div class="flex justify-center md:justify-start mx-[12px] my-[12px]">
           <div class="bg-[#D3FAFF]  rounded-full ">
            <img src="assets/images/2_Featuredicon.png" alt="">
       
           </div>
          </div>
-        <h2 class="text-[30px] font-[600] leading-[38px]">
+        <h3 class="text-[30px] font-[600] text-center md:text-left leading-[38px]">
           View Timeline of Any Contact
-        </h2>
-        <p class="text-gray-600 mt-2 font-[400] leading-[28px] text-[18px]">
+        </h3>
+        <p class="text-gray-600 mt-2 font-[400] leading-[28px] text-[18px] text-center md:text-start ">
           See all interactions, tasks, and notes in one place for a complete history of every relationships
         </p>
-        <ul class="mt-4 space-y-2">
+        <ul class="list_1 mt-4 space-y-6">
          <li class="list flex items-center ">
           <img class="bg-[#D3FAff] px-1 py-1 rounded-full mr-2"src="assets/images/tick.png" alt="">
           </i>
@@ -247,7 +280,7 @@
         </ul>
        </div>
       </div>
-      <div class="flex justify-center ">
+      <div class="flex justify-center md:order-none sm:order-last ">
        <img alt="Screenshot of My Tasks for the Day with tasks and idle contacts" class=" side-image" src="assets/images/3_2_screen_mockup.png" />
       </div>
      </div>
@@ -255,20 +288,23 @@
 
     
       </div>
-      <div class="flex bg-[#FAFAFA]  ">
-        <div class="flex-grow flex flex-col items-center justify-center text-center py-[96px] ">
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+      <div class="flex  max-sm:px-[19px]  ">
+        <div class="flex-grow flex flex-col max-sm:px-[13px]  items-center max-sm:rounded-[16px] justify-center text-center py-[96px] bg-gray-100 ">
+          <h2 class="max-sm:text-[33px] md:text-[36px] font-bold text-gray-800 mb-4">
            Get your Early Access
           </h2>
-          <p class="text-gray-600 mb-6">
+          <p class="text-gray-600 mb-6 md:w-[768px] max-sm:text-[18px] md:text-[20px] font-[400]" style="font-family: inter;">
            Start managing your relationships and Followups. Get started in seconds and experience the power of Worktodo.today.
           </p>
           <div class="flex space-x-4">
            <button class="bg-white text-gray-800 font-medium py-2 px-4 border border-gray-300 rounded-md shadow-sm hover:bg-gray-100 hidden">
             Learn More
            </button>
-           <button class="bg-[#4AA2AE] text-white font-medium py-2 px-4 rounded-md shadow-sm hover:bg-teal-600">
-            Try Now
+           <button class="bg-[#4AA2AE] text-white font-medium py-2 px-4 rounded-md shadow-sm ">
+            
+            <a class="" href="https://tally.so/r/m6QNbk">
+              Try Now
+              </a>
            </button>
           </div>
          </div>
@@ -276,14 +312,18 @@
       </div>
     
     <footer class="bg-white py-4">
-      <div class="container flex mx-auto px-4 py-[43px]  justify-between items-center">
+      <div class="border-t border-gray-100 md:mt-[45px]">
+      <div class=" flex md:mx-[74px] px-4  py-[33px]  justify-between items-center">
+        <div class="hidden md:block">
         <img alt="Worktodo.today logo" class="" src="assets/images/WTD.png" width="100"/>
-        <div class="flex">
+      </div>
+        <div class="flex justify-center max-sm:ml-[38px]">
        <p class="text-gray-500 text-sm">
         © 2025 Worktodo.Today All rights reserved.
        </p>
       </div>
       </div>
+    </div>
       </footer>
     
   

@@ -1,9 +1,13 @@
+
+
+
 @media (max-width: 480px) {
     .card {
       font-size: 16px;
       width: 100%;
     }
   }
+  
   
 
 body {
@@ -28,15 +32,21 @@ body {
  font-family: 'inter';   
 }
 .side-image{
-    width: 537px;
+    width: 767px;
     height: 'auto';
 }
 li.list{
     margin-top: 14px;
 }
-.nav-1{
-    padding: 20px 52px;
-}
+
 .fnt{
     font-family: "instrument sans";
+    
+}
+.list_1{
+    font-family: "instrument sans";
+    color: #535862;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
 }
