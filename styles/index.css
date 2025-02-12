@@ -31,10 +31,7 @@ body {
 .warn{
  font-family: 'inter';   
 }
-.side-image{
-    width: 767px;
-    height: 'auto';
-}
+
 li.list{
     margin-top: 14px;
 }
